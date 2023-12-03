@@ -22,12 +22,7 @@ public static class HttpRequestHandler
 
             Console.WriteLine($"{httpRequest.RequestMethod} /{httpRequest.Route}");
 
-            var requestTask = httpRequest.RequestMethod switch
-            {
-                HttpMethod.Get => GetRequestHandler.HandleGetRequestAsync(httpRequest, stream),
-                _ => BaseRequestHandler.HandleRequestAsync(httpRequest, stream)
-            };
-            await requestTask;
+            await BaseRequestHandler.HandleRequestAsync(httpRequest, stream);
 
         }
         catch (Exception ex)

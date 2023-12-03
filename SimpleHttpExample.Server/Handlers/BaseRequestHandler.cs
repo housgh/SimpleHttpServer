@@ -18,7 +18,7 @@ public static class BaseRequestHandler
             HttpMethod.Post => HttpRoutes.PostRoutes[parsedRequest.RouteKey],
             HttpMethod.Put => HttpRoutes.PutRoutes[parsedRequest.RouteKey],
             HttpMethod.Delete => HttpRoutes.DeleteRoutes[parsedRequest.RouteKey],
-            HttpMethod.Get => throw new InvalidRouteException(),
+            HttpMethod.Get => HttpRoutes.GetRoutes[parsedRequest.RouteKey],
             _ => throw new InvalidMethodException()
         };
         var parameters = ParameterHelper.ParseParameters(parsedRequest.Parameters, methodInfo);
@@ -26,22 +26,21 @@ public static class BaseRequestHandler
         allParameters.AddRange(parameters);
 
         var controllerType = methodInfo.DeclaringType;
-        var controller = (BaseController) Activator.CreateInstance(controllerType!)!;
+        var controller = (BaseController)Activator.CreateInstance(controllerType!)!;
 
         controller.Request = request;
 
-        if (request.StringContent is not null)
+        if (request.RequestMethod != HttpMethod.Get && request.StringContent is not null)
         {
             var body = RequestBodyHelper.ParseBody(request.StringContent, methodInfo);
             allParameters.Add(body);
-        }
 
+        }
         while (methodInfo.GetParameters().Length > allParameters.Count)
         {
             allParameters.Add(null);
         }
-
-        var result = methodInfo.Invoke(controller, allParameters.ToArray()); 
+        var result = methodInfo.Invoke(controller, allParameters.ToArray());
         var response = new HttpResponse(content: result);
         await ResponseHandler.SendResponse(response, stream);
     }
