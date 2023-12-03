@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleHttpExample.Client", "SimpleHttpExample\SimpleHttpExample.Client.csproj", "{1E4BE930-2AB8-422C-BBE2-F1DB1324AE23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleHttpExample.Server", "SimpleHttpExample.Server\SimpleHttpExample.Server.csproj", "{B7B8D25C-400C-4B0B-85EB-97C526E19113}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E4BE930-2AB8-422C-BBE2-F1DB1324AE23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E4BE930-2AB8-422C-BBE2-F1DB1324AE23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E4BE930-2AB8-422C-BBE2-F1DB1324AE23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E4BE930-2AB8-422C-BBE2-F1DB1324AE23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7B8D25C-400C-4B0B-85EB-97C526E19113}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7B8D25C-400C-4B0B-85EB-97C526E19113}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7B8D25C-400C-4B0B-85EB-97C526E19113}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7B8D25C-400C-4B0B-85EB-97C526E19113}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DD67AFAD-1A26-42E2-B65B-5679AF47B084}
+	EndGlobalSection
+EndGlobal

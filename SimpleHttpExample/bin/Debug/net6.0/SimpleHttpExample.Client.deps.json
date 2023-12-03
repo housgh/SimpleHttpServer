@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "SimpleHttpExample.Client/1.0.0": {
+        "dependencies": {
+          "SimpleHttpExample.Server": "1.0.0"
+        },
+        "runtime": {
+          "SimpleHttpExample.Client.dll": {}
+        }
+      },
+      "SimpleHttpExample.Server/1.0.0": {
+        "runtime": {
+          "SimpleHttpExample.Server.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SimpleHttpExample.Client/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SimpleHttpExample.Server/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
