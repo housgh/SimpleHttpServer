@@ -8,7 +8,7 @@ public static class ControllerHelper
     public static void ReadControllers()
     {
         Console.WriteLine("Initializing Controllers...");
-        var controllers = Assembly.GetEntryAssembly()
+        var controllers = Assembly.GetEntryAssembly()!
             .GetTypes()
             .Where(x => x.GetCustomAttributes()
                 .Select(y => y.GetType()).Contains(typeof(ControllerAttribute)));

@@ -4,7 +4,7 @@ namespace SimpleHttpExample.Server.Helpers;
 
 public static class ParameterHelper
 {
-    public static object[] ParseParameters(Dictionary<string, string> parameters, MethodInfo methodInfo)
+    public static IEnumerable<object> ParseParameters(Dictionary<string, string> parameters, MethodInfo methodInfo)
     {
         var methodParameters = methodInfo.GetParameters();
         var parsedParameters = new List<object>();

@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using SimpleHttpExample.Server.Exceptions;
+﻿using SimpleHttpExample.Server.Exceptions;
 
 namespace SimpleHttpExample.Server.Helpers;
 

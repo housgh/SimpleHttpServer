@@ -1,8 +1,6 @@
 ﻿using System.Net.Sockets;
 using System.Text;
-using SimpleHttpExample.Server.Exceptions;
 using SimpleHttpExample.Server.Helpers;
-using HttpMethod = SimpleHttpExample.Server.Helpers.HttpMethod;
 
 namespace SimpleHttpExample.Server.Handlers;
 

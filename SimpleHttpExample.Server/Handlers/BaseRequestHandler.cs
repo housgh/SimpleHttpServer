@@ -1,6 +1,4 @@
 ﻿using System.Net.Sockets;
-using System.Text.Json;
-using System.Text;
 using SimpleHttpExample.Server.Exceptions;
 using SimpleHttpExample.Server.Helpers;
 using SimpleHttpExample.Server.Models;

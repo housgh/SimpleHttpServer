@@ -1,7 +1,6 @@
 ﻿using System.Net;
 using System.Text;
 using System.Text.Json;
-using System.Text.RegularExpressions;
 
 namespace SimpleHttpExample.Server.Models;
 
@@ -27,7 +26,7 @@ public class HttpResponse
     }
 
     public HttpStatusCode StatusCode { get; set; }
-    public object? Content { get; set; } = new();
+    public object? Content { get; set; }
     public Dictionary<string, string> ResponseHeaders { get; set; } = new();
 
     public override string ToString()
